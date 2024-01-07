@@ -33,7 +33,7 @@ def etl_dag():
     db_file = os.path.join(os.path.dirname(__file__), 'sql', 'db.sqlite')
     create_tables = SQLExecuteQueryOperator(
         task_id='create_tables',
-        sqlite_conn_id='sqlite_nedday',
+        conn_id='sqlite_nedday',
         sql=CREATE_TABLES_SQL
     )
 
